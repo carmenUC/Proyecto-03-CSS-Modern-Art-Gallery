@@ -1,5 +1,4 @@
 html {
-    font-family: $poppins;
     padding-top: 33px;
 }
 
@@ -9,5 +8,5 @@ html {
 }
 
 ul {
-    @include reset-list() 
+    @include reset-list();
 }
