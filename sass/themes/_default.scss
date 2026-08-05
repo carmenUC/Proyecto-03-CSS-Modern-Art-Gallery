@@ -1,12 +1,30 @@
-html {
-    padding-top: 33px;
+
+.header__container{
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
-.container {
-    padding-left: 100px;
-    padding-right: 100px;
+.hero__container{
+    padding-left: 16px;
+    padding-right: 16px;
+    @include breakpoint(tablet) {
+        padding: 40px;
+        margin-bottom: 0px;
+    }
+    @include breakpoint(desktopxl) {
+        padding: 165px;
+        }
 }
 
 ul {
     @include reset-list();
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+html, body {
+    height: 100vh;
 }

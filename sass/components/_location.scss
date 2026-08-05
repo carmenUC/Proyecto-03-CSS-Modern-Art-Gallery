@@ -1,0 +1,118 @@
+ .location {
+    position: relative;
+    iframe {
+        width: 100vw;
+        height: 50vp;
+        border: 0;
+        display: block;
+    }
+    &__button{
+        border-style: none;
+        display: flex;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+        align-items: center;
+        background: linear-gradient(to right, $gold 25%,black 25% 100%);    
+        padding: 35px 45px 35px 32px;
+        width: 260px;
+        height: auto;
+        &:hover{
+            background: linear-gradient(to right, black 25%, $gold 25% 100%);    
+                }
+        @include breakpoint(tablet) {
+            margin-left: 30px;
+        }
+    
+        &--btn1 {
+            font-family: $title;
+            font-size: 20px;
+            font-weight: 100;
+            letter-spacing: 3px;
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            position: absolute;
+            right: 20px;
+            }
+        }
+
+    img {
+        padding: 10px;
+        position: absolute;
+        pointer-events: none;
+        left: 20px;
+
+    }
+
+    &__content{
+        background-color: black;
+        padding-right: 16px;
+        padding-left: 16px;
+        @include breakpoint(tablet) {
+            padding-right: 39px;
+            padding-left: 39px;
+            padding-top: 88px;
+            display: flex;
+            gap: 68px;
+        }
+
+    }
+
+
+
+    &__tabletdisplay {
+    @include breakpoint(tablet) {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        margin-bottom: 0px;
+    }
+    
+}
+
+    &__content {
+        &--title {
+            color: white;
+            font-family: $title;
+            font-size: 50px;
+            font-weight: 900;
+            line-height: 70px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            padding-top: 30px;
+            @include breakpoint(tablet) {
+                font-size: 55px;
+                width: 223px;
+            }
+
+            }
+
+        &--subtitle {
+            color: $gold;
+            font-size: 32px; 
+            font-family: $title;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        
+        &--address{
+            color: white;
+            font-size: 18px;
+            font-family: $small-font;
+            line-height: 28px;
+            margin-bottom: 20px;
+           
+        }
+
+        &--directions{
+            color: white;
+            font-size: 18px;
+            font-family: $small-font;
+            line-height: 28px;
+            padding-bottom  : 50px;
+
+        }
+     }
+ }
