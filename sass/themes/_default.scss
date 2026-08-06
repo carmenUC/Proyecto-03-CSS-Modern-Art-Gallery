@@ -4,6 +4,11 @@
     padding-right: 16px;
 }
 
+.hero {
+    @include breakpoint(desktopxl) {
+        margin-bottom: 0px;
+    }
+}
 .hero__container{
     padding-left: 16px;
     padding-right: 16px;
@@ -13,6 +18,7 @@
     }
     @include breakpoint(desktopxl) {
         padding: 165px;
+        margin-bottom: 0px;
         }
 }
 
@@ -26,5 +32,5 @@ a {
 }
 
 html, body {
-    height: 100vh;
+    min-height: 100%;
 }

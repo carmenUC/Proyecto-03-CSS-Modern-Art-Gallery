@@ -4,26 +4,36 @@
         margin-bottom: 80px;
     }
 
-    &__tablet-2 {
-        display: none;
-        @include breakpoint(tablet) {
-            display: block;
-
-        }
-    }
-
     &__tablet-1 {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+
+        @include breakpoint(tablet) {        
         display: flex;
         flex-direction: row-reverse;
         gap: 50px;
     }
 
-    &__content--yourday {
+        @include breakpoint(desktopxl) {
+            gap: 122px;
+            margin-bottom: 30px;
+        }
+
+    }
+
+    &__content--yourday{
+        width: 343px;
+        @include breakpoint(tablet) {
+            margin-top: 20px;
+        }
         @include breakpoint(desktopxl) {
             width: 350px;
+            h1 {
+                width: 350px;
+            }
         }
-    
-    
+
         &-title {
         color: $black;
         font-family: $title;
@@ -47,14 +57,8 @@
         }
 
     }
-}
 
-    &__image {
-        width: 398px;
-        height: 400px;
-    }
-
-    &__content--yourday-text {
+        &-text {
         color: $grey;
         font-family: $small-font;
         font-size: 18px;
@@ -62,24 +66,67 @@
         line-height: 28px;
         margin-bottom: 30px;
 
+       
+        @include breakpoint(desktopxl) {
+            font-size: 22px;
+            line-height: 32px;
+        }
+    }
+    }
+
+    &__redbox {
+        width: 343px;
+        height: 400px;
+
+        @include breakpoint(tablet) {
+            width: 398px;
+        }
+        @include breakpoint(desktopxl) {
+            width: 635px;
+            object-fit: cover;
+        }
+    }
+
+    &__tabletdesktopformat {
+        display: block;
+        @include breakpoint(tablet) {
+            display: block;
+            display: grid;
+            gap: 11px;
+            grid-template-columns: 398px 280px;
+            grid-template-rows: 313px 396px;
+
+            &--column1 {
+                grid-column: 1 / span 1;
+                grid-row: 1 / span 2;
+            }
+
+            &--column2top {
+                grid-column: 2 / span 1;
+                grid-row: 1 / span 1;
+            }
+            &--column2bottom {
+                grid-column: 2 / span 1;
+                grid-row: 2 / span 1;
+            }
+        }
+
+        @include breakpoint(desktopxl) {
+            grid-template-columns: 635px 445px;
+            grid-template-rows: 313px 377px;
+            gap: 30px;
+        }
+    }
+
+
+    &__bench {
+    margin-bottom: 16px;
+    }
+ 
+
+    &__public {
+    margin-bottom: 16px;
     }  
-
-    &__tablet--bottom {
-        @include breakpoint(tablet) {
-        display: flex;
-        gap: 10px;
-      
-        }
-    }
-
-    &__tablet--right {
-        @include breakpoint(tablet) {
-        display: flex;
-        justify-content: flex-end;
-        flex-direction: column;
-        margin-bottom: 0px;
-        }
-    }
 
     &__content--comeandbe {
         background-color: black;
@@ -91,10 +138,15 @@
             padding-top: 85px;
             padding-left: 30px;
             padding-right: 30px;
-            padding-bottom: 55px;  
+            padding-bottom: 50px;  
             margin-bottom:0px;          
         }
 
+        @include breakpoint(desktopxl) {
+            width: 445px;
+            padding: 65px 47px;
+            height: 377px;
+        }
     }
 
     &__content--comeandbe-title {
@@ -111,6 +163,10 @@
             line-height: 45px;
             width: fit-content;
         }
+        @include breakpoint(desktopxl) {
+            font-size: 30px;
+            line-height: 60px;
+        }
 
     }
 
@@ -121,34 +177,10 @@
         font-weight: 400;
         line-height: 28px;
         margin-bottom: 30px;
-    }
 
-
-.image1 {
-    margin-bottom: 16px;
-    @include breakpoint(tablet) {
-        display: none;
-    }
-
-
-    &-tablet {
-        display: none;
-        @include breakpoint(tablet) {
-        width: 398px;
-        height: 720px;
-        position: relative;
-        display: block;
-        objetct-fit: cover;
-    
+        @include breakpoint(desktopxl){
+            font-size: 22px;
+            line-height: 32px;
         }
-
     }
-}
-
-.image2 {
-    margin-bottom: 16px;
-    @include breakpoint(tablet) {
-        display: none;
-    }   
-}
 }

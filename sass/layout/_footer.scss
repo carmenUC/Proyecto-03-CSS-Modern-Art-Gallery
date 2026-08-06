@@ -1,6 +1,7 @@
 .footer {
     padding: 48px 32px;
     background-color: black;
+   
 
     img {
     display: block;
@@ -13,11 +14,19 @@
         gap: 40px;
     }
 
+    @include breakpoint(desktopxl) {
+        padding: 80px 165px;
+    }
+
     &__logo{
         width: 45%;
         @include breakpoint(tablet) {
             width: 20%;
         }
+        @include breakpoint(desktopxl) {
+            width: 15%;
+    }
+
     }
 
     &__content {
@@ -30,9 +39,13 @@
         margin-bottom: 38px;
         @include breakpoint(tablet) {
             width: 281px;
-            margin-top: 0px;
-           
+            margin-top: 0px;  
         }
+
+        @include breakpoint(desktopxl) {
+            width: 430px;
+            font-size: 18px;
+    }
     }
 
     &__social-media {
@@ -48,16 +61,26 @@
             justify-content: space-between;
             align-items: flex-start;
             gap: 40px;
-            padding-bottom: 10px;
+            padding-bottom: 56px;
             padding-left: 40px;
             padding-right: 40px;
+            padding-top: 56px;
         }
+
+        @include breakpoint(desktopxl) {
+            padding: 80px 165px;
+            gap:140px;
+            }
         
         &--logo{
         width: 45%;
         @include breakpoint(tablet) {
             width: 20%;
         }
+
+        @include breakpoint(desktopxl) {
+            width: 15%;
+            }
 
     }
 
@@ -73,8 +96,15 @@
             margin-top: 0px;
             padding-top: 0px;
             width: 281px;
-
         }
+         @include breakpoint(desktopxl) {
+            width: 430px;
+            margin-bottom: 0;
+            }
+
+        @include breakpoint(desktopxl) {
+            font-size: 18px;
+            }
        
     }
 
